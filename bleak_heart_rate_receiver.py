@@ -2,18 +2,24 @@ import asyncio
 import signal
 from bleak import BleakClient, BleakScanner
 
+# list of BLE names
+CORSENSE_NAME = "CorSense B-05384"
+POLAR_H10_NAME = "Polar H10 75340F2C"
 POLAR_OH1_NAME = "Polar OH1 83D5862B"
 POLAR_SENSE_NAME = "Polar Sense A56A6B22"
-CORSENSE_NAME = "CorSense B-05384"
 
+# list of BLE characteristics
 HEARTRATE_CHARACTERISTIC = "00002a37-0000-1000-8000-00805f9b34fb"
 
-NAME_CHOICE = POLAR_SENSE_NAME
+# choose which name and characteristic to use
+NAME_CHOICE = POLAR_H10_NAME
 CHARACTERISTIC_CHOICE = HEARTRATE_CHARACTERISTIC
 
 def heartrate_callback(sender: int, data: bytearray):
     index = 1
     measurement = list(data)
+
+    print(measurement)
 
     if measurement[0] & 0x01 == 0x01:
         print(f"Heart Rate: {int.from_bytes(measurement[index:index+2], byteorder='little')} bpm")
