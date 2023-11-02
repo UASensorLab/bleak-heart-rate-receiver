@@ -5,7 +5,8 @@ If the sensor also sends sensor contact detection bit, energy expended, or RR in
 ---
 Known to work with:
 - EliteHRV CorSense
-- Polar OH1+ 
+- Polar OH1+
+- Polar Verity Sense
 
 ---
 Usage:
