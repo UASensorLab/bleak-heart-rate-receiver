@@ -1,6 +1,6 @@
 # bleak-heart-rate-receiver
 Bleak code that connects to any commercial sensor that streams heart rate over GATT according to bluetooth specifications and parses data.
-If the sensor also sends sensor contact detection bit, energy expended, or RR intervals, it will also paste them.
+If the sensor also sends sensor contact detection bit, energy expended, or RR intervals, it will also parse them.
 
 ---
 Known to work with:
