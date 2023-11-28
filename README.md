@@ -4,6 +4,7 @@ If the sensor also sends sensor contact detection bit, energy expended, or RR in
 
 ---
 Known to work with:
+-  Biostrap Chest Strap
 - EliteHRV CorSense
 - Polar H9
 - Polar H10
